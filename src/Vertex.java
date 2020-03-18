@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Vertex {
+class Vertex {
     private String name;
     private ArrayList<Edge> edges = new ArrayList<>();
 
@@ -8,15 +8,15 @@ public class Vertex {
         this.name = name;
     }
 
-    public String getName(){
+     String getName(){
         return name;
     }
 
-    public void addEdge(Vertex v, int weight){
-        this.edges.add(new Edge(v, weight));
+    void addEdge(Vertex v, int weight){
+        this.edges.add(new Edge(this, v, weight));
     }
 
-    public ArrayList<Edge> getEdges(){
+    ArrayList<Edge> getEdges(){
         return edges;
     }
 

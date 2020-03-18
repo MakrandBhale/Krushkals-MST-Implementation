@@ -1,8 +1,8 @@
 # Default ignored files
-/workspace.xml
-/encodings.xml
-/misc.xml
-/modules.xml
-/project-template.xml
-/vcs.xml
-/out/
+#/workspace.xml
+#/encodings.xml
+#/misc.xml
+#/modules.xml
+#/project-template.xml
+#/vcs.xml
+

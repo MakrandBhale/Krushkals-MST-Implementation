@@ -1,7 +1,7 @@
 class Edge {
     private Vertex dest;
     private int weight;
-    Edge(Vertex dest, int weight){
+    Edge(Vertex source, Vertex dest, int weight){
         this.dest = dest;
         this.weight = weight;
     }

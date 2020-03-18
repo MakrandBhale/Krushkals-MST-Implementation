@@ -9,15 +9,16 @@ public class Graph {
         return v;
     }
 
-    public void addEdge(Vertex source, Vertex dest, int weight){
+    void addEdge(Vertex source, Vertex dest, int weight){
         source.addEdge(dest, weight);
     }
 
-    public void addEdge(Vertex source, Vertex dest, int weight, boolean isBidirectional){
+    void addEdge(Vertex source, Vertex dest, int weight, boolean isBidirectional){
         // if biDirectional is true, then both source and destination vertices will get an edge with same weight,
         // to add different weight, call addEdge(source, dest, weight) function (twice).
-        source.addEdge(dest, weight);
-        dest.addEdge(source, weight);
+        if(isBidirectional)
+            addEdge(dest, source, weight);
+        addEdge(source, dest, weight);
     }
 
     public void printNeighbours(Vertex v){

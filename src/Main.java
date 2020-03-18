@@ -10,6 +10,6 @@ public class Main {
         g.addEdge(b, a, 5, true);
         g.addEdge(b, c, 3);
         g.addEdge(c, a, 4);
-        g.printNeighbours(b);
+        g.printNeighbours(a);
     }
 }

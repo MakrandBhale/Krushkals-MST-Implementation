@@ -6,10 +6,19 @@ public class Main {
         Vertex a = g.createVertex("a");
         Vertex b = g.createVertex("b");
         Vertex c = g.createVertex("c");
+        Vertex d = g.createVertex("d");
 
-        g.addEdge(b, a, 5, true);
-        g.addEdge(b, c, 3);
-        g.addEdge(c, a, 4);
-        g.printNeighbours(a);
+        Vertex e = g.createVertex("e");
+
+        g.addEdge(a,b,15,true);
+        g.addEdge(a,c,3,true);
+        g.addEdge(a,d,2,true);
+        g.addEdge(d,c,2,true);
+        g.addEdge(b,c,1,true);
+        g.addEdge(c,e,4,true);
+        g.addEdge(b,e,190,true);
+        g.addEdge(e,d,180,true);
+        g.start();
+        g.printMST();
     }
 }
